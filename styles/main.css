@@ -209,12 +209,6 @@ html, body{
 #buy-btn:hover{
 	opacity:0.9;
 }
-/*.trailer{
-	position:absolute;
-	left:30px;
-	top:50%;
-	margin-top:-175px; /*negative half */
-/*}*/
 #trailer{
 	position:absolute;
 	width:575px !important;
@@ -286,12 +280,6 @@ html, body{
 	margin:10px 43px 0 20px;
 	border-bottom: 1px solid #E6E6E6;
 }
-/*.ten{
-	width:10px;
-	height:10px;
-	margin:auto;
-	background:#FFFF00;
-}*/
 
 /*styles for info box*/
 .tabbed_content {
@@ -404,7 +392,6 @@ html, body{
 	margin-bottom:25px;
 }
 .cast-col1{
-	/*position:absolute;*/
 	float:left;
 	width:172px;
 	margin-left:30px;
