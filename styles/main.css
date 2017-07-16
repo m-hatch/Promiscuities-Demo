@@ -201,6 +201,8 @@ html, body{
 	text-decoration: none;
 	text-shadow: rgb(80, 41, 102) 0px 1px 0px;
 	background: #36648B;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 #buy-btn:hover{
 	opacity:0.9;
@@ -270,10 +272,11 @@ html, body{
 /*social*/
 .social{
 	position:absolute;
-	right:0;
+	right: 168px;
+	width: 100px;
+  text-align: center;
 	z-index:300;
 	padding:20px 20px; 
-	margin:10px 43px 0 20px;
 	border-bottom: 1px solid #E6E6E6;
 }
 
