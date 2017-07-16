@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" id="splash">
+  <head>
+    <title>Promiscuities - A Short Film by Jonathan Leder</title>
+    <meta name="robots" content="noindex,nofollow"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Promiscuities - A Short Film by Jonathan Leder">
+    <meta name="keywords" content="Promiscuities, film, Jonathan Leder,Imperial Pictures Limited, Amy Hood, Lindsay Jones, Phillip X Levine, Jow Bongiorno, Danae DiGiulio, Natalie Jhane, Rachel Daily, Noel Kirwen-Downs, Lindsay Roan, Kacie Marie, Veronique, Lafleur, Otto Van Strasser, Ann Hacket, Dana Kopel, Quentin Rauschenbach, Peter Stone, Hunter Stephenson">
+    <!-- Styles -->
+    <link href="styles/landing.css" rel="stylesheet">
+    <!--
+    *** Webmaster/Site Developer: Montgomery Hatch ***
+    -->
+  </head>
+  
+  <body>
+    <div id="container">
+
+      <video autoplay loop muted poster="img/bg-img.jpg" id="bgvid">
+        <source src="video/bgvid-bach.webm" type="video/webm">
+        <source src="video/bgvid-bach.mp4" type="video/mp4">
+        <source src="video/bgvid-bach.ogv" type="video/ogg">
+      </video>
+
+      <div class="top">
+        <h1 class="imperial-logo">IMPERIAL PICTURES LIMITED</h1>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+
+      <div class="title_container">
+        <h2>PRESENTS</h2>
+        <a class="title" href="home.html">PROMISCUITIES</a>
+        <h2>A FILM BY JONATHAN LEDER</h2>
+        <a href="home.html"><h3>WATCH THE TRAILER</h3></a>
+        <button><img id="mute" src="img/sound.png" alt="mute button"></button>
+      </div>
+
+      <div class="bottom"></div>
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/respond.min.js"></script>
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+      <!--[if lt IE 9]>
+      <script>
+      document.createElement('video');
+      </script>
+      <![endif]-->
+    <script src="js/mobile.js"></script>
+    <script>
+      // Resize the video elements so that we don't get any borders due to aspect ratio
+      function resizeVideo() {
+        if ($(window).height() > $(window).width() * 0.5425) { // Which dimension is bigger dependant on aspect ratio (16:9)
+          $("video").removeAttr("height").removeAttr("width").width("auto").height("100%");
+        }
+        else {
+          $("video").removeAttr("height").removeAttr("width").width("100%").height("auto");
+        }
+      };
+      $( document ).ready(function() {
+          resizeVideo();
+      });
+
+      // Add the resize function to the window resize event but put it on a short timer as to not call it too often
+      var resizeTimer;
+      $(window).resize(function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(resizeVideo, 150);
+      });
+    </script>
+    <script>
+      // Video sound toggle
+        $("button").click( function (){
+          $("video").prop('muted', !$("video").prop('muted'));
+      });
+      
+    </script>
+  </body>
+</html>
