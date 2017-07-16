@@ -185,17 +185,13 @@ html, body{
 	height:276px;
 	margin-top:12px;
 	margin-bottom:6px;
-	border: solid 1px #545454;
 }
 #poster:hover{
 	opacity:0.9;
 }
 #buy-btn{
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
-	border-bottom-left-radius: 8px;
-	border: 1px solid rgb(47, 25, 171);
+	width: 172px;
+	border-radius: 4px;
 	display: block;
 	cursor: pointer;
 	color: rgb(255, 255, 255);
@@ -204,7 +200,7 @@ html, body{
 	text-align: center;
 	text-decoration: none;
 	text-shadow: rgb(80, 41, 102) 0px 1px 0px;
-	background: linear-gradient(rgb(95, 69, 199) 5%, rgb(160, 45, 189) 100%) rgb(95, 69, 199);
+	background: #36648B;
 }
 #buy-btn:hover{
 	opacity:0.9;
@@ -285,6 +281,8 @@ html, body{
 .tabbed_content {
 	width: 675px;
 	margin-bottom:10px;	
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 #tabs-label{
 	width:210px;
